@@ -123,7 +123,7 @@ export const TodoList = () => {
                 <h2 className="font-medium">Session Todos:</h2>
                 {todos.map((todo, idx) => (
                   <TodoItem
-                    key={todo.txHash}
+                    key={todo.txHash || idx}
                     todo={todo}
                     onUpdate={handleUpdate}
                     onDelete={handleDelete}
